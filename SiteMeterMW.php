@@ -47,5 +47,5 @@ function wfSiteMeterMW( $skin, &$bar ) {
 }
 
 # Site Meter code
-$wgSiteMeterMW = '/code.php';
+#$wgSiteMeterMW = '/code.php';
 
