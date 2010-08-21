@@ -34,7 +34,7 @@ $wgExtensionCredits['parserhook'][] = array (
 	'author' => "[http://mediawiki.org/wiki/User:Lcawte Lewis Cawte]",
 	'descriptionmsg' => 'sitemetermw-desc',
 );
-// Internationalization file
+# Internationalization file
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['SiteMeterMW'] = $dir . 'SiteMeterMW.i18n.php';
 

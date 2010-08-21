@@ -1,6 +1,6 @@
 <?php
 /**
- * Internationalisation file for the SidebarDonateBox extension
+ * Internationalisation file for the Site Meter for MediaWiki extension
  * @addtogroup Extensions
  */
  
