@@ -38,14 +38,14 @@ $wgExtensionCredits['parserhook'][] = array (
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['SiteMeterMW'] = $dir . 'SiteMeterMW.i18n.php';
 
-$wgHooks['SiteMeterMW'][] = 'wgSiteMeterMW';
+$wgHooks['SiteMeterMW'][] = 'wfSiteMeterMW';
 
-function wgSiteMeterMW( $skin, &$bar ) {
+function wfSiteMeterMW( $skin, &$bar ) {
 	global $wgSiteMeterMW;
 	$bar['sitemeter'] = $wgSiteMeterMW;
 	return true;
 }
 
 # Site Meter code
-#$wgSiteMeterMW = '/code.php';
+$wgSiteMeterMW = '/code.php';
 
