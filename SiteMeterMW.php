@@ -40,7 +40,7 @@ $wgExtensionMessagesFiles['SiteMeterMW'] = $dir . 'SiteMeterMW.i18n.php';
 
 $wgHooks['SiteMeterMW'][] = 'wfSiteMeterMW';
 
-function wfSiteMeterMW( $skin, &$bar ) {
+function wgSiteMeterMW( $skin, &$bar ) {
 	global $wgSiteMeterMW;
 	$bar['sitemeter'] = $wgSiteMeterMW;
 	return true;
