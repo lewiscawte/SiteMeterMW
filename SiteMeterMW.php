@@ -38,7 +38,7 @@ $wgExtensionCredits['parserhook'][] = array (
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['SiteMeterMW'] = $dir . 'SiteMeterMW.i18n.php';
 
-$wgHooks['SiteMeterMW'][] = 'wfSiteMeterMW';
+$wgHooks['SiteMeterMW'][] = 'wgSiteMeterMW';
 
 function wgSiteMeterMW( $skin, &$bar ) {
 	global $wgSiteMeterMW;
