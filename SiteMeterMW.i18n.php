@@ -7,9 +7,17 @@
 $messages = array();
  
 /** English
- * @author Lewis Cawte
+ * @author Lcawte
  */
 $messages['en'] = array(
-	'sitemetermw-desc' => 'Adds a method of adding "Site Meter" traffic statistics to your site.'
+        'sitemeter' => 'Site Meter',
+	'sitemetermw-desc' => 'Adds a method of adding Site Meter traffic statistics to your site.'
 );
 
+/** Message documentation (Message documentation)
+ * @author Lcawte
+ */
+$messages['qqq'] = array(
+        'sitemeter' => 'This is the message file for the Sidebar heading (eg: "Traffic Stats" or "Site Meter".)',
+	'sitemetermw-desc' => '{{desc}}'
+);
