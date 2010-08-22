@@ -10,7 +10,7 @@ $messages = array();
  * @author Lcawte
  */
 $messages['en'] = array(
-        'sitemeter' => 'Site Meter',
+        'sitemeter' => 'Site Statistics',
 	'sitemetermw-desc' => 'Adds a method of adding Site Meter traffic statistics to your site.'
 );
 
