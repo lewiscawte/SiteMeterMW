@@ -51,17 +51,18 @@ function wfSiteMeterMW( $skin, &$bar ) {
 $wgSiteMeterMW = "";
 
 $smCodename = "sm8sm4mw";
+$smServer   = "sm8";
 
-$wgSiteMeterType = "javascript"
+$wgSiteMeterType = "javascript";
 
 if ($wgSiteMeterType = javascript) {
  $wgSiteMeter = '
 <!-- Site Meter -->
-<script type="text/javascript" src="http://sm8.sitemeter.com/js/counter.js?site=$smCodename">
+<script type="text/javascript" src="http://sm8.sitemeter.com/js/counter.js?site=' + $smCodename + '">
 </script>
 <noscript>
-<a href="http://sm8.sitemeter.com/stats.asp?site=$smCodename" target="_top">
-<img src="http://sm8.sitemeter.com/meter.asp?site=$smCodename" alt="Site Meter" border="0"/></a>
+<a href="http://sm8.sitemeter.com/stats.asp?site=' + $smCodename + '" target="_top">
+<img src="http://sm8.sitemeter.com/meter.asp?site=' + $smCodename + '" alt="Site Meter" border="0"/></a>
 </noscript>
 <!-- Copyright (c)2009 Site Meter -->'
 }
