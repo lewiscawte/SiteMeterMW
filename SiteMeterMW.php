@@ -54,7 +54,7 @@ $smCodename = "sm8sm4mw";
 
 $wgSiteMeterType = "javascript"
 
-if ($wgSiteMeterType = "javascript")
+if ($wgSiteMeterType = javascript) {
  $wgSiteMeter = '
 <!-- Site Meter -->
 <script type="text/javascript" src="http://sm8.sitemeter.com/js/counter.js?site=$smCodename">
@@ -64,3 +64,4 @@ if ($wgSiteMeterType = "javascript")
 <img src="http://sm8.sitemeter.com/meter.asp?site=$smCodename" alt="Site Meter" border="0"/></a>
 </noscript>
 <!-- Copyright (c)2009 Site Meter -->'
+};
