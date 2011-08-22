@@ -55,7 +55,7 @@ $smServer   = "sm8";
 
 $wgSiteMeterType = "javascript";
 
-if ($wgSiteMeterType = javascript) {
+if ($wgSiteMeterType === javascript) {
  $wgSiteMeter = '
 <!-- Site Meter -->
 <script type="text/javascript" src="http://sm8.sitemeter.com/js/counter.js?site=' + $smCodename + '">
