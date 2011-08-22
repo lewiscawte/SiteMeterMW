@@ -64,5 +64,5 @@ if ($wgSiteMeterType = javascript) {
 <a href="http://sm8.sitemeter.com/stats.asp?site=' + $smCodename + '" target="_top">
 <img src="http://sm8.sitemeter.com/meter.asp?site=' + $smCodename + '" alt="Site Meter" border="0"/></a>
 </noscript>
-<!-- Copyright (c)2009 Site Meter -->'
+<!-- Copyright (c)2009 Site Meter -->';
 }
