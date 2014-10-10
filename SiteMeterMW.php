@@ -28,42 +28,48 @@ if( !defined( 'MEDIAWIKI' ) ) {
 
 $wgExtensionCredits['parserhook'][] = array (
 	'path' => __FILE__,
-	'name' => 'Site Meter for MediaWiki',
+	'name' => 'Site Meter',
 	'url' => 'http://mediawiki.org/wiki/Extension:SiteMeter4MW',
 	'version' => '1.0',
 	'author' => "[http://mediawiki.org/wiki/User:Lcawte Lewis Cawte]",
-	'descriptionmsg' => 'sitemetermw-desc',
+	'description-msg' => 'sitemeter-desc',
 );
 # Internationalization file
 $dir = dirname( __FILE__ ) . '/';
 
+<<<<<<< HEAD
 $wgMessagesDirs['YourExtension'] = __DIR__ . '/i18n';
+=======
+$wgMessagesDirs['SiteMeter'] = __DIR__ . '/i18n';
+>>>>>>> 226dfce... Convert to JSON i18n files.
 
 $wgHooks['SkinBuildSidebar'][] = "wfSiteMeterMW";
 
 
 function wfSiteMeterMW( $skin, &$bar ) {
 	global $wgSiteMeterMW;
-	$bar['sitemeter'] = $wgSiteMeterMW;
+	$bar['sitemxeter'] = $wgSiteMeterMW;
 	return true;
 }
 
 # Site Meter code
 $wgSiteMeterMW = "";
 
-$smCodename = "sm8sm4mw";
 $smServer   = "sm8";
+$smCodename = $smServer . "sm4mw";
 
-$wgSiteMeterType = "javascript";
+$smType = "javascript";
 
-if ($wgSiteMeterType === javascript) {
- $wgSiteMeter = '
-<!-- Site Meter -->
-<script type="text/javascript" src="http://sm8.sitemeter.com/js/counter.js?site=' + $smCodename + '">
-</script>
-<noscript>
-<a href="http://sm8.sitemeter.com/stats.asp?site=' + $smCodename + '" target="_top">
-<img src="http://sm8.sitemeter.com/meter.asp?site=' + $smCodename + '" alt="Site Meter" border="0"/></a>
-</noscript>
-<!-- Copyright (c)2009 Site Meter -->';
+if ($smType === "javascript") {
+	$wgSiteMeterMW =
+"<!-- Site Meter -->" .
+'<script type="text/javascript" src="http://' . $smServer . '.sitemeter.com/js/counter.js?site=' . $smCodename . '">' .
+"</script>" .
+"<noscript>" .
+'<a href="http://' . $smServer . '.sitemeter.com/stats.asp?site=' . $smCodename . '" target="_top">' .
+'<img src="http://' . $smServer . '.sitemeter.com/meter.asp?site=' . $smCodename . '" alt="Site Meter" border="0"/></a>' .
+"</noscript>" .
+"<!-- Copyright (c)2009 Site Meter -->";
+} else {
+	// Pure HTML Code
 }
