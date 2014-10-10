@@ -36,7 +36,8 @@ $wgExtensionCredits['parserhook'][] = array (
 );
 # Internationalization file
 $dir = dirname( __FILE__ ) . '/';
-$wgExtensionMessagesFiles['SiteMeterMW'] = $dir . 'SiteMeterMW.i18n.php';
+
+$wgMessagesDirs['YourExtension'] = __DIR__ . '/i18n';
 
 $wgHooks['SkinBuildSidebar'][] = "wfSiteMeterMW";
 
