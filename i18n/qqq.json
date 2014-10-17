@@ -5,9 +5,5 @@
 		]
 	},
 	"sitemeter": "This is the message file for the Sidebar heading (eg: \"Traffic Stats\" or \"Site Meter\".)",
-<<<<<<< HEAD
-	"sitemetermw-desc": "{{desc}}"
-=======
 	"sitemeter-desc": "{{desc}}"
->>>>>>> 226dfce... Convert to JSON i18n files.
 }

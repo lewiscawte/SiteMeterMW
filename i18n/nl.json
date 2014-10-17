@@ -5,9 +5,5 @@
 		]
 	},
 	"sitemeter": "Statistieken van de site",
-<<<<<<< HEAD
-	"sitemetermw-desc": "Voegt een manier toe die u in staat stelt om een \"trafic meter\" aan uw site toe te voegen die bijhoudt hoeveel mensen uw site bezoeken"
-=======
 	"sitemeter-desc": "Voegt een manier toe die u in staat stelt om een \"trafic meter\" aan uw site toe te voegen die bijhoudt hoeveel mensen uw site bezoeken"
->>>>>>> 226dfce... Convert to JSON i18n files.
 }

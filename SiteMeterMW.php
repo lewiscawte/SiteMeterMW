@@ -30,19 +30,14 @@ $wgExtensionCredits['parserhook'][] = array (
 	'path' => __FILE__,
 	'name' => 'Site Meter',
 	'url' => 'http://mediawiki.org/wiki/Extension:SiteMeter4MW',
-	'version' => '1.0',
-	'author' => "[http://mediawiki.org/wiki/User:Lcawte Lewis Cawte]",
-	'description-msg' => 'sitemeter-desc',
+	'version' => '1.1',
+	'author' => "Lewis Cawte",
+	'descriptionmsg' => 'sitemeter-desc',
 );
 # Internationalization file
 $dir = dirname( __FILE__ ) . '/';
 
-<<<<<<< HEAD
-$wgMessagesDirs['YourExtension'] = __DIR__ . '/i18n';
-=======
 $wgMessagesDirs['SiteMeter'] = __DIR__ . '/i18n';
->>>>>>> 226dfce... Convert to JSON i18n files.
-
 $wgHooks['SkinBuildSidebar'][] = "wfSiteMeterMW";
 
 

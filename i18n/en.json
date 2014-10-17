@@ -5,9 +5,5 @@
 		]
 	},
 	"sitemeter": "Site Statistics",
-<<<<<<< HEAD
-	"sitemetermw-desc": "Adds a method of adding Site Meter traffic statistics to your site."
-=======
 	"sitemeter-desc": "Adds a method of adding Site Meter traffic statistics to your site."
->>>>>>> 226dfce... Convert to JSON i18n files.
 }
