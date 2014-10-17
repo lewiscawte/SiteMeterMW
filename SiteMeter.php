@@ -29,7 +29,7 @@ if( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array (
 	'path' => __FILE__,
 	'name' => 'Site Meter',
-	'url' => 'http://mediawiki.org/wiki/Extension:SiteMeter4MW',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:Site_Meter',
 	'version' => '1.1',
 	'author' => "Lewis Cawte",
 	'descriptionmsg' => 'sitemeter-desc',
@@ -43,7 +43,7 @@ $wgHooks['SkinBuildSidebar'][] = "wfSiteMeterMW";
 
 function wfSiteMeterMW( $skin, &$bar ) {
 	global $wgSiteMeterMW;
-	$bar['sitemxeter'] = $wgSiteMeterMW;
+	$bar['sitemeter'] = $wgSiteMeterMW;
 	return true;
 }
 
