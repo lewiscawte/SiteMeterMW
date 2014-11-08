@@ -35,8 +35,8 @@ $wgExtensionCredits['parserhook'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Site_Meter',
 );
 
-$wgSiteMeterServer = 'sm8';
-$wgSiteMeterCodename = 'sm4mw';
+$wgSiteMeterServer = 's8'; // Server part (s<Number>.sitemeter.com)
+$wgSiteMeterCodename = 'sm4mw'; // Codename part (server<CodenameHere>)
 
 # Internationalization files
 $wgMessagesDirs['SiteMeter'] = __DIR__ . '/i18n';
