@@ -22,49 +22,40 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 1 );
 }
 
-$wgExtensionCredits['parserhook'][] = array (
+$wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Site Meter',
-	'url' => 'https://www.mediawiki.org/wiki/Extension:Site_Meter',
 	'version' => '1.1',
-	'author' => "Lewis Cawte",
+	'author' => 'Lewis Cawte',
 	'descriptionmsg' => 'sitemeter-desc',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:Site_Meter',
 );
-# Internationalization file
-$dir = dirname( __FILE__ ) . '/';
 
+$wgSiteMeterServer = 'sm8';
+$wgSiteMeterCodename = 'sm4mw';
+
+# Internationalization files
 $wgMessagesDirs['SiteMeter'] = __DIR__ . '/i18n';
+
 $wgHooks['SkinBuildSidebar'][] = "wfSiteMeterMW";
 
-
 function wfSiteMeterMW( $skin, &$bar ) {
-	global $wgSiteMeterMW;
-	$bar['sitemeter'] = $wgSiteMeterMW;
+	global $wgSiteMeterServer, $wgSiteMeterCodename;
+
+	$siteMeterCodename = $wgSiteMeterServer . $wgSiteMeterCodename;
+	$siteMeterCode = '<!-- Site Meter -->' .
+'<script type="text/javascript" src="http://' . $wgSiteMeterServer . '.sitemeter.com/js/counter.js?site=' . $siteMeterCodename . '">' .
+'</script>' .
+'<noscript>' .
+'<a href="http://' . $wgSiteMeterServer . '.sitemeter.com/stats.asp?site=' . $siteMeterCodename . '" target="_top">' .
+'<img src="http://' . $wgSiteMeterServer . '.sitemeter.com/meter.asp?site=' . $siteMeterCodename . '" alt="Site Meter" border="0"/></a>' .
+'</noscript>' .
+'<!-- Copyright (c)2009 Site Meter -->';
+
+	$bar['sitemeter'] = $siteMeterCode;
 	return true;
-}
-
-# Site Meter code
-$wgSiteMeterMW = "";
-
-$smServer   = "sm8";
-$smCodename = $smServer . "sm4mw";
-
-$smType = "javascript";
-
-if ($smType === "javascript") {
-	$wgSiteMeterMW =
-"<!-- Site Meter -->" .
-'<script type="text/javascript" src="http://' . $smServer . '.sitemeter.com/js/counter.js?site=' . $smCodename . '">' .
-"</script>" .
-"<noscript>" .
-'<a href="http://' . $smServer . '.sitemeter.com/stats.asp?site=' . $smCodename . '" target="_top">' .
-'<img src="http://' . $smServer . '.sitemeter.com/meter.asp?site=' . $smCodename . '" alt="Site Meter" border="0"/></a>' .
-"</noscript>" .
-"<!-- Copyright (c)2009 Site Meter -->";
-} else {
-	// Pure HTML Code
 }
